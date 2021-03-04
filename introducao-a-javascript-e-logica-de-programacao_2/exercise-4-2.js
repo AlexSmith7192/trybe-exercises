@@ -5,11 +5,14 @@ for (let indexNumber = 0; indexNumber < numbers.length; indexNumber += 1) {
   console.log(numbers[indexNumber]);
 }
 
-// questão
+//Segunda questão
 let soma = 0;
 for (let indexNumber = 0; indexNumber < numbers.length; indexNumber += 1) {
   soma = soma + numbers[indexNumber];
 }
 console.log(soma);
 
-
+//Terceira questão
+let arithmeticAverage = 0;
+arithmeticAverage = soma / numbers.length
+console.log(arithmeticAverage);
