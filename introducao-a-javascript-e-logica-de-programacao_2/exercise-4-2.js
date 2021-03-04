@@ -14,5 +14,10 @@ console.log(soma);
 
 //Terceira questão
 let arithmeticAverage = 0;
-arithmeticAverage = soma / numbers.length
-console.log(arithmeticAverage);
+arithmeticAverage = soma / numbers.length;
+//Quarta questão
+if (arithmeticAverage >= 20) {
+  console.log('Valor maior que 20');
+} else {
+  console.log('Valor menor ou igual a 20')  
+}
