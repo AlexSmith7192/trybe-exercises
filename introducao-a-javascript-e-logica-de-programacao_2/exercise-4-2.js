@@ -21,3 +21,12 @@ if (arithmeticAverage >= 20) {
 } else {
   console.log('Valor menor ou igual a 20')  
 }
+
+//Quinta questão
+let larger = 0
+for (let indexLarger = 0; indexLarger < numbers.length; indexLarger += 1) {
+  if (numbers[indexLarger] > larger) {
+    larger = numbers[[indexLarger]];
+  }
+}
+console.log(larger);
