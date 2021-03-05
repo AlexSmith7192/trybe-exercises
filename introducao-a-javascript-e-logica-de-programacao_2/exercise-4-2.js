@@ -30,3 +30,19 @@ for (let indexLarger = 0; indexLarger < numbers.length; indexLarger += 1) {
   }
 }
 console.log(larger);
+
+//Sexta questão
+let numbersOdd = 0
+for (let indexOdd = 0; indexOdd < numbers.length; indexOdd += 1) {
+  if ((numbers[indexOdd] % 2) != 0) {
+    numbersOdd += 1;
+  }
+}
+
+if (numbersOdd === 0) {
+  console.log('nenhum valor ímpar encontrado')
+} else {
+  console.log(numbersOdd);
+}
+
+
