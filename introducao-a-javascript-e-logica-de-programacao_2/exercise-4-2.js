@@ -53,3 +53,10 @@ for (let indexSmaller = 0; indexSmaller < numbers.length; indexSmaller += 1) {
   }
 }
 console.log(smaller);
+
+//Oitava questao
+let twentyFive = []
+for (let indexTwentyFive = 1; indexTwentyFive < 26; indexTwentyFive += 1) {
+  twentyFive.push(indexTwentyFive)
+}
+console.log(twentyFive)
