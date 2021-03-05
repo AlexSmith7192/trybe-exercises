@@ -45,4 +45,11 @@ if (numbersOdd === 0) {
   console.log(numbersOdd);
 }
 
-
+//Setima questao
+let smaller = 9999
+for (let indexSmaller = 0; indexSmaller < numbers.length; indexSmaller += 1) {
+  if (numbers[indexSmaller] < smaller) {
+    smaller = numbers[indexSmaller];
+  }
+}
+console.log(smaller);
