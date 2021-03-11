@@ -60,3 +60,8 @@ for (let indexTwentyFive = 1; indexTwentyFive < 26; indexTwentyFive += 1) {
   twentyFive.push(indexTwentyFive)
 }
 console.log(twentyFive)
+
+//Nona questao
+for (let indexDivision = 0; indexDivision < twentyFive.length; indexDivision += 1) {
+  console.log(twentyFive[indexDivision] / 2)
+}
