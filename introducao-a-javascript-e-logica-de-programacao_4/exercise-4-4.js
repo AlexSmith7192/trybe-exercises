@@ -12,3 +12,7 @@ console.log(info)
 for (keyInfo in info) {
   console.log(keyInfo);
 }
+
+for (indexInfo in info) {
+  console.log(info[indexInfo])
+}
