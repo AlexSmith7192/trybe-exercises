@@ -70,7 +70,13 @@
 
       textH1(0, 'Exercício 5.1 - JavaScript');
 
+      function consoleP () {
+        for (let indexP = 0; indexP < tagP.length; indexP += 1) {
+          console.log(tagP[indexP].innerText);
+        }
+      }
 
+      consoleP();
       /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
