@@ -78,6 +78,11 @@
       divMain.appendChild(createTag('div', 'left-content'));
 
       divMain.appendChild(createTag('div', 'right-content'));
+
+      const divLeftContent = divMain.firstChild.nextSibling.appendChild(createTag('img', 'small-image'));
+      divLeftContent.src = 'https://picsum.photos/200';
+      
+      
     </script>
   </body>
 </html>
