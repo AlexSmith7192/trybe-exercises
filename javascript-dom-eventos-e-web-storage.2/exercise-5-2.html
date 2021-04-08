@@ -57,10 +57,10 @@
   </head>
   <body>
     <script>
-      const body = document.querySelector('body');
+      const bodyJS = document.querySelector('body');
       const bodyH1 = document.createElement('h1')
       bodyH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-      body.appendChild(bodyH1);
+      bodyJS.appendChild(bodyH1);
 
       function createTag (nameTag, nameClass) {
         const tag = document.createElement(nameTag);
@@ -68,14 +68,14 @@
         return tag;
       }
 
-      body.appendChild(createTag('div', 'main-content'));
+      bodyJS.appendChild(createTag('div', 'main-content'));
 
       const divMain = document.querySelector('div');
       divMain.appendChild(createTag('div', 'center-content'));
 
       divMain.firstChild.appendChild(createTag('p', '')).innerText = 'Alguma coisa!';
       
-      
+      divMain.appendChild(createTag('div', 'left-content'));
     </script>
   </body>
 </html>
