@@ -77,7 +77,7 @@
       
       const divLeft = divMain.appendChild(createTag('div', 'left-content'));
 
-      divMain.appendChild(createTag('div', 'right-content'));
+      const divRight = divMain.appendChild(createTag('div', 'right-content'));
 
       const imgDivLeftContent = divMain.firstChild.nextSibling.appendChild(createTag('img', 'small-image'));
       imgDivLeftContent.src = 'https://picsum.photos/200';
@@ -96,6 +96,8 @@
       }
       
       divMain.removeChild(divLeft);
+
+      divRight.style.marginRight = 'auto';
     </script>
   </body>
 </html>
