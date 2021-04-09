@@ -75,7 +75,7 @@
 
       divMain.firstChild.appendChild(createTag('p', '')).innerText = 'Alguma coisa!';
       
-      divMain.appendChild(createTag('div', 'left-content'));
+      const divLeft = divMain.appendChild(createTag('div', 'left-content'));
 
       divMain.appendChild(createTag('div', 'right-content'));
 
@@ -95,6 +95,7 @@
         divMain.appendChild(createTag('h3', 'description'));
       }
       
+      divMain.removeChild(divLeft);
     </script>
   </body>
 </html>
