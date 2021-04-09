@@ -32,9 +32,13 @@ for (let indexOl = 0; indexOl < numbers.length; indexOl += 1) {
     li.innerText = numbers[indexOl].toUpperCase();
 }
 
-for (let indexH3 = 1; indexH3 < 4; indexH3 += 1) {
-    divMain.appendChild(createTag('h3', 'description'));
-}
+const h301 = divMain.appendChild(createTag('h3', 'description'));
+const h302 = divMain.appendChild(createTag('h3', 'description'));
+const h303 = divMain.appendChild(createTag('h3', 'description'));
+
+h301.innerText = 'Descrição 1';
+h302.innerText = 'Descrição 2';
+h303.innerText = 'Descrição 3';
 
 divMain.removeChild(divLeft);
 
