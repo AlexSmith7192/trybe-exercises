@@ -1,109 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 5.2</title>
-    <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-      .title {
-        text-align: center;
-      }
+<body>
+    <script src="script.js"></script>
+</body>
 
-      .main-content {
-        background-color: yellow;
-      }
-
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .main-content .center-content p {
-        font-style: italic;
-      }
-
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
-
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
-
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
-
-      .main-content .description {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      const bodyJS = document.querySelector('body');
-
-      function createTag (nameTag, nameClass) {
-        const tag = document.createElement(nameTag);
-        tag.classList = (nameClass);
-        return tag;
-      }
-
-      const h1Body = bodyJS.appendChild(createTag('h1', 'title'));
-      h1Body.innerText = 'Exercício 5.2 - JavaScript DOM';
-
-      bodyJS.appendChild(createTag('div', 'main-content'));
-
-      const divMain = document.querySelector('div');
-      divMain.appendChild(createTag('div', 'center-content'));
-
-      divMain.firstChild.appendChild(createTag('p', '')).innerText = 'Alguma coisa!';
-      
-      const divLeft = divMain.appendChild(createTag('div', 'left-content'));
-
-      const divRight = divMain.appendChild(createTag('div', 'right-content'));
-
-      const imgDivLeftContent = divMain.firstChild.nextSibling.appendChild(createTag('img', 'small-image'));
-      imgDivLeftContent.src = 'https://picsum.photos/200';
-      
-      const olDivRightContent = divMain.lastChild.appendChild(createTag('ul', ''));
-
-      let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
-
-      for (let indexOl = 0; indexOl < numbers.length; indexOl += 1) {
-        let li = olDivRightContent.appendChild(createTag('li', ''));
-        li.innerText = numbers[indexOl].toUpperCase();
-      }
-
-      for (let indexH3 = 1; indexH3 < 4; indexH3 += 1) {
-        divMain.appendChild(createTag('h3', 'description'));
-      }
-      
-      divMain.removeChild(divLeft);
-
-      divRight.style.marginRight = 'auto';
-
-      divMain.style.backgroundColor = 'green';
-
-      for (let indexRe = 1; indexRe < 3; indexRe += 1) {
-        olDivRightContent.removeChild(olDivRightContent.lastChild);
-      }
-    </script>
-  </body>
 </html>
