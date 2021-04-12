@@ -20,7 +20,7 @@ function createDaysMoth() {
     const liDay = document.createElement('li');
     liDay.className = 'day';
     liDay.innerHTML = dezDaysList[indexDays];
-    
+
     if (dezDaysList[indexDays] === 25) {
       liDay.classList.add('holiday', 'friday');
     } else if (dezDaysList[indexDays] === 24 || dezDaysList[indexDays] === 31) {
@@ -28,7 +28,7 @@ function createDaysMoth() {
     } else if (dezDaysList[indexDays] === 4 || dezDaysList[indexDays] === 11 || dezDaysList[indexDays] === 18) {
       liDay.classList.add('friday');
     }
-    
+
     days.appendChild(liDay);
   }
 }
@@ -37,10 +37,22 @@ createDaysMoth();
 
 function holidays(name) {
   const btnContainer = document.getElementsByClassName('buttons-container');
-  const btnHoliday = document.createElement('button');
-  btnHoliday.innerText = name;
-  btnHoliday.id = 'btn-holiday';
-  btnContainer[0].appendChild(btnHoliday);
+  const holiday = document.createElement('button');
+  holiday.innerText = name;
+  holiday.id = 'btn-holiday';
+  btnContainer[0].appendChild(holiday);
 }
 
 holidays('Feriados');
+
+function clickHoliday() {
+  const btnHoliday = document.getElementById('btn-holiday');
+  const holidays = document.getElementsByClassName('holiday');
+  btnHoliday.addEventListener('click', () => {
+    for (let indexH = 0; indexH < holidays.length; indexH += 1) {
+      holidays[indexH].style.backgroundColor = 'rgb(255,255,255)';
+    }
+  })
+}
+
+clickHoliday();
