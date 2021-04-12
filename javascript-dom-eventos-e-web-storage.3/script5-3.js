@@ -1,3 +1,5 @@
+const btnContainer = document.getElementsByClassName('buttons-container');
+
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
   const weekDaysList = document.querySelector('.week-days');
@@ -36,7 +38,6 @@ function createDaysMoth() {
 createDaysMoth();
 
 function holidays(name) {
-  const btnContainer = document.getElementsByClassName('buttons-container');
   const holiday = document.createElement('button');
   holiday.innerText = name;
   holiday.id = 'btn-holiday';
@@ -56,3 +57,12 @@ function clickHoliday() {
 }
 
 clickHoliday();
+
+function createFriday(name) {
+  const holiday = document.createElement('button');
+  holiday.innerText = name;
+  holiday.id = 'btn-friday';
+  btnContainer[0].appendChild(holiday);
+}
+
+createFriday('Sexta-feira');
