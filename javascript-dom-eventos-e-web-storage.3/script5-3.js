@@ -34,3 +34,13 @@ function createDaysMoth() {
 }
 
 createDaysMoth();
+
+function holidays(name) {
+  const btnContainer = document.getElementsByClassName('buttons-container');
+  const btnHoliday = document.createElement('button');
+  btnHoliday.innerText = name;
+  btnHoliday.id = 'btn-holiday';
+  btnContainer[0].appendChild(btnHoliday);
+}
+
+holidays('Feriados');
