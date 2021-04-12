@@ -66,3 +66,15 @@ function createFriday(name) {
 }
 
 createFriday('Sexta-feira');
+
+function clickFriday() {
+  const btnFriday = document.getElementById('btn-friday');
+  const fridays = document.getElementsByClassName('friday');
+  btnFriday.addEventListener('click', () => {
+    for (let indexF = 0; indexF < fridays.length; indexF += 1) {
+      fridays[indexF].innerText = 'SEXTOU!';
+    }
+  })
+}
+
+clickFriday();
