@@ -8,6 +8,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <form action="submit" method="get">
+    <fieldset>
+      <label for="full-name">Nome:</label>
+      <input type="text" id="full-name" maxlength="40" placeholder="Nome completo" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="algumacoisa@provedor.com" maxlength="50" required>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
+
+      <label for="address">Endereço:</label>
+      <input type="text" name="address" id="address" maxlength="200" placeholder="Escreva seu endereço ..." required>
+
+      <label for="city">Cidade:</label>
+      <input type="text" name="city" id="city" placeholder="Sua cidade" maxlength="28" required>
+
+      <label for="state">Estado:</label>
+      <select name="state" id="state" required>
+      </select>
+
+      <label for="home">Casa</label>
+      <input type="radio" name="type" id="home" value="Casa">
+
+      <label for="apartment">Apartamento</label>
+      <input type="radio" name="type" id="apartment" value="apartamento">
+    </fieldset>
+  </form>
 
   <script src="script.js"></script>
 </body>
