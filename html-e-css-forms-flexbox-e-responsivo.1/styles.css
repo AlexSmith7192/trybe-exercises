@@ -1,4 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
+.container {
+  margin: 5% 0;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
 }
