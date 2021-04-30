@@ -1,15 +1,31 @@
+// const assert = require('assert');
+
+// function sum(a, b) {
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     throw new Error('parameters must be numbers');
+//   }
+
+//   return a + b;
+// }
+
+// assert.strictEqual(sum(4,5), 9);
+// assert.strictEqual(sum(0,0), 0);
+// assert.strictEqual(sum(4,'5'), 9);
+
+// assert.throws(() => {sum(4,5);},`parameters must be numbers`);
+
+
 const assert = require('assert');
 
-function sum(a, b) {
-  if (typeof a !== 'number' || typeof b !== 'number') {
-    throw new Error('parameters must be numbers');
+function myRemove(arr, item) {
+  let newArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (item !== arr[index]) {
+      newArr.push(arr[index]);
+    }
   }
-
-  return a + b;
+  return newArr;
 }
 
-assert.strictEqual(sum(4,5), 9);
-assert.strictEqual(sum(0,0), 0);
-assert.strictEqual(sum(4,'5'), 9);
-
-assert.throws(() => {sum(4,5);},`parameters must be numbers`);
+assert.deepStrictEqual(myRemove([1,2,3,4],3), [1,2,4]);
+assert.notDeepStrictEqual(myRemove([1,2,3,4],3), [1,2,3,4]);
