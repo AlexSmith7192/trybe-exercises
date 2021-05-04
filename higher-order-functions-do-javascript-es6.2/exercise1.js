@@ -64,13 +64,7 @@ const books = [
 ];
 
 function authorBornIn1947() {
-  let result;
-  books.find((object) => {
-    if (object.author.birthYear === 1947) {
-      result = object.author.name;
-    }
-  });
-  return result;
+  return books.find(object => object.author.birthYear === 1947).author.name;
 }
 
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
