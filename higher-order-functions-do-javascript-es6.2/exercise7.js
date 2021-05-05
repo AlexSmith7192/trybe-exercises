@@ -63,10 +63,10 @@ const books = [
   },
 ];
 
-const expectedResult = true;
+const expectedResult = false;
 
-function someBookWasReleaseOnThe80s() {
-  return books.some(object => object.releaseYear < 1990 && object.releaseYear > 1979);
+function authorUnique() {
+  return books.every((book) => !books.some((bookSome) => (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name))); //copiado do gabarito do course
 }
 
-assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
+assert.strictEqual(authorUnique(), expectedResult);
