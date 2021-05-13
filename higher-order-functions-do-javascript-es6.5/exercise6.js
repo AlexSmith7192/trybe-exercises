@@ -9,7 +9,7 @@ const toObject = ([n, b, y]) => {
     name: n,
     brand: b,
     year: y,
-  }
+  };
 }
 
 assert.deepStrictEqual(toObject(palio), { name: 'Palio', brand: 'Fiat', year: 2019 });
